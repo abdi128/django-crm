@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangoprojectone',
-        'USER': 'djangoone',
-        'PASSWORD': 'djangoone',
+        'USER': 'root',
+        'PASSWORD': 'Augustine2018?',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -126,3 +126,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+

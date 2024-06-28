@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Member 
+from .models import Record
 
-class MemberAdmin(admin.ModelAdmin):
-    list_display=('first_name','last_name')
+class RecordAdmin(admin.ModelAdmin):
+    list_display=('created_at','first_name','last_name','email','phone','address','city','state','zipcode')
 
 
-admin.site.register(Member,MemberAdmin)
+admin.site.register(Record,RecordAdmin)

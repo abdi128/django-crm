@@ -1,0 +1,35 @@
+{% extends 'base.html '%}
+
+{% block title %}{{record.first_name}} {{record.last_name}}{% endblock %}
+
+
+
+{% block content %}
+
+{% include 'navbar.html' %}<br>
+<br>
+
+
+<div class="col-md-6 offset-md-3">
+    <a href="{% url 'update_record' record.id %}" class="btn btn-success float-end">Update</a><br><br>
+<div class="card">
+    <h5 class="card-header"><strong>{{ record.first_name }} {{ record.last_name }}</strong></h5>
+    <div class="card-body">
+      <p class="card-text"><strong>Email: </strong>{{ record.email }}</p>
+      <p class="card-text"><strong>Phone: </strong>{{ record.phone }}</p>
+      <p class="card-text"><strong>Address: </strong>{{ record.address }}</p>
+      <p class="card-text"><strong>City: </strong>{{ record.city }}</p>
+      <p class="card-text"><strong>State: </strong>{{ record.state }}</p>
+      <p class="card-text"><strong>Zipcode: </strong>{{ record.zipcode }}</p>
+      <p class="card-text"><strong>Date Joined: </strong>{{ record.created_at }}</p>
+      
+    </div>
+  </div><br>
+
+    <a href="{% url 'delete_record' record.id %}" class="btn btn-danger float-end">Delete</a>
+    <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+
+
+</div>
+
+{% endblock %}
